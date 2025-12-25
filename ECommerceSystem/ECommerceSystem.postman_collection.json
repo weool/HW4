@@ -1,0 +1,113 @@
+﻿{
+  "info": {
+    "_postman_id": "ecommerce-system-demo",
+    "name": "ECommerce System API",
+    "description": "емонстрационная коллекция для тестирования микросервисов",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Order Service Tests",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 150.50\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "orders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "orders"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment Service Tests",
+      "item": [
+        {
+          "name": "Get Balance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/payments/balance",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "payments", "balance"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deposit Funds",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 1000.00\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/payments/deposit",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "payments", "deposit"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Transactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/payments/transactions",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "payments", "transactions"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
